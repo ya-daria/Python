@@ -1,0 +1,73 @@
+print("Задание №1")
+
+a = 10
+b = 15
+print("a =", a)
+print("b =", b)
+name = input("Введите ваше имя: ")
+surname = input("Введите свою фамилию: ")
+age = int(input("Введите свой возраст: "))
+family = int(input("Введите количество человек в вашей семье: "))
+
+print("Задание №2")
+
+timesec = int(input("Введите время в секундах: "))
+timehour = int(timesec/3600)
+timemin = int(timesec % 3600/60)
+timesec2 = int(timesec % 3600 % 60)
+print(f"{timehour}:{timemin}:{timesec2}")
+
+print("Задание №3")
+
+n = int(input("Введите число: "))
+n2 = int(f"{n}{n}")
+n3 = int(f"{n}{n}{n}")
+sum = (n + n2 + n3)
+print (sum)
+
+print("Задание №4")
+
+n = input("Введите целое положительное число: ")
+count = len(n)
+rem = int(n)
+max = 0
+i = 0
+while count > i:
+    t = rem % 10
+    if t > max:
+        max = t
+
+    rem = int(rem / 10)
+    i = i + 1
+
+print(max)
+
+print("Задание №5")
+
+vyr = int(input("Введите выручку: "))
+izd = int(input("Введите издержки: "))
+prib = vyr-izd
+if vyr > izd:
+    print("Прибыль")
+    rent = prib/vyr
+    print("Рентабельность: ",rent)
+else:
+    print("Убыток")
+people = int(input("Введите количсетво сотрудников: "))
+pribpeople = prib/people
+print("Прибыль из расчета на одного сотрудника: ", pribpeople)
+
+print("Задание №6")
+a = int(input("Введите результат пробежки в первый день: "))
+b = int(input("Введите целевой результат пробежки: "))
+res = 0
+day = 0
+while res < b:
+    day = day + 1
+    res = res + (a/10)
+
+    print("День № ", day)
+    print("Км", "%.2f" % res)
+
+
+print(f"Ответ: на {day} день спортсмен достиг результата — не менее {b} км.")
