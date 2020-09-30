@@ -1,0 +1,39 @@
+print('Задание №1')
+my_list = [76, 'name', 3.14, None, {'apple':{'яблоко'}, 'orange':{'апельсин'}}, ('К','о','р','т','е','ж'), ['с','п','и','с','о','к']]
+for element in my_list:
+    print(type(element))
+
+print('Задание №2')
+ll = ['Москва', 'Санкт-Петербург', 'Волгоград', 'Нижний Новгород', 'Ростов Великий']
+for element in range(1, len(ll), 2):
+    ll[element - 1], ll[element] = ll[element], ll[element-1]
+    print(ll)
+
+
+print('Задание №3')
+month = int(input('Введите месяц в виде целого числа от 1 до 12: '))
+seasons = {1: 'зима', 2: 'весна', 3: 'лето', 4: 'осень'}
+
+if month == 1 or month == 2 or month == 12:
+    print(seasons.get(1))
+elif 2 < month < 6:
+    print(seasons.get(2))
+elif 5 < month < 9:
+    print(seasons.get(3))
+elif 8 < month < 12:
+    print(seasons.get(4))
+else: print("Введите число от 1 до 12")
+
+print('Задание №4')
+ll = input("Введите несколько слов, разделенных пробелом: ")
+num = 1
+for element in ll.split():
+    print(f'{num}. {element[:10:]}')
+    num = num + 1
+
+print('Задание №5')
+el = input("Введите элемент рейтинга: ")
+my_list = [57, 46, 35, 31, 18, 10, 7]
+my_list.append(int(el))
+my_list.sort(reverse = True)
+print(my_list)
