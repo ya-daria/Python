@@ -1,0 +1,65 @@
+print("Задание №1")
+def delenie(var_1, var_2):
+    if var_2 == 0:
+        return 'Делить на 0 нельзя!'
+    else:
+        return int(var_1 / var_2)
+
+
+print(delenie(30, 15))
+
+print("Задание №2")
+def profile(var_1, var_2, var_3, var_4, var_5, var_6):
+    print(f"Фамилия - {var_1}; Имя - {var_2}; Год рождения - {var_3}; Город проживания - {var_4}; email - {var_5}; Телефон - {var_6}")
+
+
+profile(var_1='Яковлева', var_2='Дарья', var_3=1996, var_4='Москва', var_5='ya.daria@icloud.com', var_6=+79267126700)
+
+print("Задание №3")
+def my_func(var_1, var_2, var_3):
+    my_list = [var_1, var_2, var_3]
+    my_list.sort(reverse=True)
+
+    return int(my_list[0] + my_list[1])
+
+print(my_func(5, 2,9))
+
+print("Задание №4")
+def my_func(x, y):
+    return x ** y
+print(my_func(4, -2))
+
+print("Задание №4.1")
+
+
+def my_func(x, y):
+    count = 0
+    result = 1
+    while count < (y * (-1)):
+        result = result * (1 / x)
+        count += 1
+    return result
+
+
+print(my_func(4, -2))
+
+
+print("Задание №5")
+summa = 0
+while True:
+    s = input("Введите строку чисел через пробел: ")
+    stop = False
+    for element in s.split():
+        if element != "*":
+            summa = summa + int(element)
+        else:
+            stop = True
+    if stop:
+        print(f'{summa}')
+        break
+    print(f'{summa}')
+
+print("Задание №6")
+def int_func(text):
+    return text.title()
+print(int_func("кровать"))
