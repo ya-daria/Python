@@ -1,0 +1,59 @@
+print("Задание №1")
+from sys import argv
+script_name, vyrab, stav, prem = argv
+print("Имя скрипта: ", script_name)
+print("Выработка: ", vyrab)
+print("Ставка: ", stav)
+print("Премия: ", prem)
+salary = (int(vyrab) * int(stav) + int(prem))
+print("Заработная плата: ", salary)
+
+print("Задание №2")
+my_list = [34, 1, 500, 11, 133, 17, 93, 6, 13, 45, 345]
+new_list = []
+count = len(my_list)
+i = 0
+while i < count:
+    if i > 0:
+        if my_list[i] > my_list[i-1]:
+            new_list.append(my_list[i])
+
+
+    i += 1
+print(new_list)
+
+print("Задание №3")
+print([el for el in range(24, 240) if el % 20 == 0 or el % 21 == 0])
+
+print("Задание №4")
+my_list = [15, 2, 3, 3, 5, 23, 8, 8, 5, 14, 7, 23]
+new_list = [el for el in my_list if my_list.count(el) == 1]
+print(new_list)
+
+print("Задание №5")
+my_list = [el for el in range(100, 1001) if el % 2 == 0]
+
+from functools import reduce
+
+def my_func(prev_el, el):
+    return prev_el * el
+
+print(reduce(my_func, my_list))
+
+print("Задание №6a")
+
+from itertools import count
+for el in count(3):
+    if el > 10:
+        break
+    else:
+        print(el)
+
+print("Задание №6b")
+from itertools import cycle
+c = 0
+for el in cycle("pamparam"):
+    if c > 15:
+        break
+    print(el)
+    c += 1
